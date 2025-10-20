@@ -27,6 +27,10 @@ Em um cenário onde casas de apostas utilizam táticas de manipulação psicoló
 
 Recentemente, a solução passou a contar com **tecnologia de reconhecimento facial com Dlib**, implementada para fins acadêmicos e para aumentar a praticidade e segurança no login do usuário.
 
+## Link do vídeo
+
+Acesse nosso vídeo que contém a explicação do projeto e uma demonstração dele funcionando, clique <a href="https://youtu.be/BO6Z59lBOSA">aqui</a>
+
 ## Principais Funcionalidades
 
 -   🧠 **Monitoramento de Hábitos:** Análise de padrões de comportamento de risco para promover autoconsciência.
