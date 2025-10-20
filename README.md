@@ -1,61 +1,158 @@
-# SecondNature
+# SecondNature 🧠✨
+
+<p align="center">
+  <img src="" width="150">
+</p>
+
+<p align="center">
+  <strong>Uma ferramenta inteligente e empática para apoiar usuários no controle da compulsão por apostas.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" alt="Status do Projeto">
+  <img src="https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=black" alt="React Native">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black" alt="Firebase">
+</p>
+
+---
+
+## 🎯 Sobre o Projeto
+
+O **SecondNature** foi desenvolvido para atuar como uma ferramenta inteligente, empática e acessível para enfrentar o crescente problema da compulsão por apostas no Brasil.
+
+> Nosso principal objetivo é oferecer aos usuários um apoio real e eficaz antes mesmo que o vício se consolide, ajudando-os a reconhecer padrões de comportamento de risco, promovendo a conscientização sobre seus próprios hábitos e oferecendo intervenções suaves, porém impactantes, no momento certo. A meta não é proibir ou punir, mas sim educar, proteger e orientar o usuário para caminhos mais saudáveis e conscientes.
+
+Em um cenário onde casas de apostas utilizam táticas de manipulação psicológica para explorar vulnerabilidades humanas, o SecondNature oferece o contraponto ético e protetor, funcionando como um **escudo cognitivo** para treinar o cérebro a resistir a estímulos viciantes.
+
+Recentemente, a solução passou a contar com **tecnologia de reconhecimento facial com Dlib**, implementada para fins acadêmicos e para aumentar a praticidade e segurança no login do usuário.
+
+## ✨ Principais Funcionalidades
+
+-   🧠 **Monitoramento de Hábitos:** Análise de padrões de comportamento de risco para promover autoconsciência.
+-   🔔 **Intervenções Inteligentes:** Notificações e alertas baseados em gatilhos de risco para oferecer suporte no momento certo.
+-   📊 **Relatórios e Insights:** Dashboards visuais sobre gastos e frequência, com sugestões de atividades alternativas.
+-   🤝 **Rede de Apoio:** Conexão facilitada com familiares, amigos e profissionais.
+-   👤 **Login com Reconhecimento Facial:** Autenticação prática e segura utilizando biometria.
+
+## 🛠️ Tecnologias Utilizadas
+
+A solução é construída com uma arquitetura moderna dividida entre o aplicativo mobile e um servidor de inteligência artificial.
+
+| Camada | Tecnologias |
+| :--- | :--- |
+| 📱 **Frontend (Mobile)** | `React Native`, `TypeScript`, `Expo`, `Axios`, `React Navigation` |
+| 🤖 **Backend (IA)** | `Python`, `Flask`, `Dlib`, `OpenCV` |
+| ☁️ **Banco de Dados & Serviços** | `Firebase Authentication`, `Cloud Firestore`, `Cloud Storage` |
+
+---
+
+## 🚀 Começando
+
+Para rodar o projeto em seu ambiente de desenvolvimento local, siga os passos abaixo.
+
+### Pré-requisitos
+
+Antes de começar, certifique-se de que você tem os seguintes softwares instalados:
+* [Node.js (LTS)](https://nodejs.org/en/) com npm
+* [Python 3.8+](https://www.python.org/downloads/) com pip
+* [Git](https://git-scm.com/)
+* O aplicativo **Expo Go** em seu smartphone (Android ou iOS)
+
+### Instalação e Configuração
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/second-nature.git](https://github.com/seu-usuario/second-nature.git)
+    cd second-nature
+    ```
+
+2.  **Configure o Firebase:**
+    * Acesse o [console do Firebase](https://console.firebase.google.com/) e crie um novo projeto.
+    * Ative os serviços de **Authentication** (com provedor E-mail/Senha), **Firestore Database** e **Cloud Storage**.
+    * Registre um novo aplicativo da Web e copie as credenciais de configuração para usar no passo 4.
+
+3.  **Configure o Backend (Python):**
+    * Navegue até a pasta do servidor:
+        ```bash
+        cd python
+        ```
+    * Crie e ative um ambiente virtual:
+        ```bash
+        # Windows
+        python -m venv venv
+        .\venv\Scripts\activate
+        # macOS / Linux
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+    * Instale as dependências:
+        ```bash
+       python -m pip install cmake Flask dlib-bin opencv-python numpy Pillow firebase-admin
+        ```
+    * No console do Firebase, vá em **Configurações do Projeto > Contas de serviço** e clique em **"Gerar nova chave privada"**.
+    * Renomeie o arquivo `.json` baixado para `serviceAccountKey.json` e mova-o para dentro desta pasta (`python/`).
+
+4.  **Configure o Frontend (Mobile):**
+    * Navegue até a pasta do aplicativo:
+        ```bash
+        cd mobile_app 
+        ```
+        *(Se você estiver na pasta `python`, use `cd ../mobile_app`)*
+    * Instale as dependências do Node.js:
+        ```bash
+        npm install
+        ```
+    * Crie um arquivo de configuração do Firebase chamado `firebaseConfig.js` (ou `.ts`) e preencha com as credenciais que você copiou no passo 2.
+    * **IMPORTANTE:** Encontre seu endereço IP local na sua rede Wi-Fi.
+        ```bash
+        # Windows
+        ipconfig
+        # macOS / Linux
+        ifconfig | grep inet
+        ```
+        Procure pelo endereço IPv4 (ex: `192.168.1.10`).
+    * Abra os arquivos de tela (`LoginScreen.tsx`, `CadastroScreen.tsx`, etc.) e substitua o valor da variável `API_URL` pelo seu IP:
+        ```javascript
+        const API_URL = 'http://SEU_IP_AQUI:5000';
+        ```
+
+### Rodando o Projeto
+
+Para que a aplicação funcione, **o backend e o frontend precisam estar rodando simultaneamente**. Abra dois terminais separados.
+
+**➡️ No Terminal 1 (Backend):**
+```bash
+cd python
+# Ative o ambiente virtual se ainda não estiver ativo
+# venv\Scripts\activate (Windows) ou source venv/bin/activate (macOS/Linux)
+flask run --host=0.0.0.0
+# ou
+python reconhecimento_facial.py
+```
+*O servidor Python estará rodando e acessível na sua rede local na porta 5000.*
+
+**➡️ No Terminal 2 (Frontend):**
+```bash
+cd mobile_app
+npm start
+```
+*Um QR Code será exibido no terminal. Escaneie-o com o aplicativo Expo Go no seu celular para abrir o SecondNature.*
+
+**Pronto!** Agora você pode testar o cadastro, o login facial e as outras funcionalidades.
+
+---
+
+## 👥 Integrantes
+
+| Nome | RM | Turma |
+| :--- | :--- | :--- |
+| Arthur Baldissera Claumann Marcos | 550219 | 3ESPF |
+| Gabriel Genaro Dalaqua | 551986 | 3ESPF |
+| Paloma Mirela dos Santos Rodrigues | 551321 | 3ESPF |
+| Ricardo Ramos Vergani | 550166 | 3ESPF |
+| Victor Kenzo Toma | 551649 | 3ESPF |
+
 <br>
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;O principal objetivo da solução SecondNature é atuar como uma ferramenta inteligente, empática e acessível para enfrentar o crescente problema da compulsão por apostas no Brasil. Queremos oferecer aos usuários um apoio real e eficaz antes mesmo que o vício se consolide, ajudando-os a reconhecer padrões de comportamento de risco, promovendo a conscientização sobre seus próprios hábitos e oferecendo intervenções suaves, porém impactantes, no momento certo. A meta não é proibir ou punir, mas sim educar, proteger e orientar o usuário para caminhos mais saudáveis e conscientes. Acreditamos que o verdadeiro impacto se dá quando a tecnologia respeita o livre-arbítrio, mas oferece os recursos e o suporte necessários para decisões mais equilibradas.</p>
 
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;Nosso público-alvo são indivíduos que estão em diferentes estágios de envolvimento com apostas — desde usuários ocasionais que querem manter o controle, até aqueles que já percebem algum grau de compulsão, mas ainda não buscaram ajuda formal. Também incluímos pessoas que, embora não apostem, se preocupam com alguém próximo e desejam uma forma de monitorar e apoiar discretamente. A solução se propõe a ser um canal de autocuidado, um primeiro passo para quem talvez não se sinta pronto para procurar um terapeuta, mas está disposto a refletir sobre seus hábitos. Além disso, profissionais da saúde mental poderão se beneficiar do SecondNature como uma ferramenta complementar de triagem e acompanhamento leve.</p>
-
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;Com a implementação dessa solução, esperamos atingir três grandes resultados: primeiro, a redução do número de pessoas que desenvolvem dependência severa, interrompendo precocemente a escalada do vício; segundo, a melhoria da saúde mental e financeira dos usuários, por meio de relatórios claros, sugestões alternativas de uso do dinheiro e atividades que ajudem a recondicionar o cérebro a buscar prazer fora do ciclo das apostas; e terceiro, a construção de uma rede de apoio eficiente, que conecta o usuário com familiares, amigos e profissionais sem burocracia, criando um senso de pertencimento e amparo.</p>
-
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;O SecondNature traz um benefício social amplo: quanto mais pessoas conscientes e no controle de seus impulsos, menor será o impacto destrutivo das apostas em famílias, relacionamentos e estruturas econômicas individuais. Em um cenário onde as casas de apostas usam táticas de manipulação psicológica para explorar vulnerabilidades humanas — como reforço intermitente, gamificação viciante, recompensas imprevisíveis e apelos emocionais — o BetAware oferece o contraponto ético e protetor. Ele funciona como um escudo cognitivo, treinando o cérebro para resistir aos estímulos viciantes e apresentando um novo repertório de ações saudáveis e conscientes.</p>
-
-<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;Agora, a nossa solução conta com a tecnologia de reconhecimento facial com dlib, para fins acadêmicos e aumento da praticidade no login do usuário.</p>
-
-<br><br>
-## Passo a passo
-
-1. Clonar o projeto no VSCode;
-2. Abrir seu console no firebase e realizar a integração no aplicativo;
-3. Preencher o arquivo .env (modelo de exemplo na pasta mobile_app);
-4. Entrar nas configurações do projeto firebase, na aba contas de serviço, gerar nova chave privada;
-5. Renomear o json baixado para serviceAccountKey.json e copiar dentro da pasta python;
-6. No terminal, verifique seu ip com o comando ipconfig;
-7. Preencha seu ip na variável API_URL das telas de login e cadastro do app mobile;
-8. Abrir 2 terminais, navegue em um deles para o diretório python (1) e o outro para o diretório mobile_app (2);
-9. No terminal 1, baixe as dependências necessárias (listadas mais abaixo na documentação) e inicie o servidor;
-10. No terminal 2, baixe as dependências com npm i -> npm start para iniciar a aplicação (scaneie o qr code gerado para abrir no expo go do seu celular);
-<br><br>
-
-## Integrantes
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>RM</th>
-    <th>Turma</th>
-  </tr>
-  <tr>
-    <td>Arthur Baldissera Claumann Marcos</td>
-    <td>550219</td>
-    <td>3ESPF</td>
-  </tr>
-  <tr>
-    <td>Gabriel Genaro Dalaqua</td>
-    <td>551986</td>
-    <td>3ESPF</td>
-  </tr>
-  <tr>
-    <td>Paloma Mirela dos Santos Rodrigues</td>
-    <td>551321</td>
-    <td>3ESPF</td>
-  </tr>
-  <tr>
-    <td>Ricardo Ramos Vergani</td>
-    <td>550166</td>
-    <td>3ESPF</td>
-  </tr>
-  <tr>
-    <td>Victor Kenzo Toma</td>
-    <td>551649</td>
-    <td>3ESPF</td>
-  </tr>
-</table>
-   
+Parabéns pelo excelente projeto!
