@@ -14,9 +14,15 @@
 ## Passo a passo
 
 1. Clonar o projeto no VSCode;
-2. Abrir o terminal e dar o comando npm install;
-3. Abrir emulador no AndroidStudio;
-4. npx expo start OU npm run android, para rodar projeto no emulador.
+2. Abrir seu console no firebase e realizar a integração no aplicativo;
+3. Preencher o arquivo .env (modelo de exemplo na pasta mobile_app);
+4. Entrar nas configurações do projeto firebase, na aba contas de serviço, gerar nova chave privada;
+5. Renomear o json baixado para serviceAccountKey.json e copiar dentro da pasta python;
+6. No terminal, verifique seu ip com o comando ipconfig;
+7. Preencha seu ip na variável API_URL das telas de login e cadastro do app mobile;
+8. Abrir 2 terminais, navegue em um deles para o diretório python (1) e o outro para o diretório mobile_app (2);
+9. No terminal 1, baixe as dependências necessárias (listadas mais abaixo na documentação) e inicie o servidor;
+10. No terminal 2, baixe as dependências com npm i -> npm start para iniciar a aplicação (scaneie o qr code gerado para abrir no expo go do seu celular);
 <br><br>
 
 ## Integrantes
