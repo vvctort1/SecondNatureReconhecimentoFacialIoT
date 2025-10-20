@@ -47,7 +47,7 @@ A solução é construída com uma arquitetura moderna dividida entre o aplicati
 
 ---
 
-## 🚀 Começando
+## Começando
 
 Para rodar o projeto em seu ambiente de desenvolvimento local, siga os passos abaixo.
 
