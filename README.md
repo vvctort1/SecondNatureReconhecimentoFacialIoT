@@ -29,7 +29,7 @@ Recentemente, a solução passou a contar com **tecnologia de reconhecimento fac
 
 ## Link do vídeo
 
-Acesse nosso vídeo que contém a explicação do projeto e uma demonstração dele funcionando, clique <a href="https://youtu.be/BO6Z59lBOSA">aqui</a>
+Acesse nosso vídeo que contém a explicação da integração do projeto com o login facial e uma demonstração dele funcionando, clique <a href="https://youtu.be/BO6Z59lBOSA">aqui</a>
 
 ## Principais Funcionalidades
 
