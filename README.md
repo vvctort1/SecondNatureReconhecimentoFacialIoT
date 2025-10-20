@@ -154,5 +154,3 @@ npm start
 | Victor Kenzo Toma | 551649 | 3ESPF |
 
 <br>
-
-Parabéns pelo excelente projeto!
