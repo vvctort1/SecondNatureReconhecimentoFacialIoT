@@ -17,7 +17,7 @@
 
 ---
 
-## 🎯 Sobre o Projeto
+## Sobre o Projeto
 
 O **SecondNature** foi desenvolvido para atuar como uma ferramenta inteligente, empática e acessível para enfrentar o crescente problema da compulsão por apostas no Brasil.
 
@@ -27,7 +27,7 @@ Em um cenário onde casas de apostas utilizam táticas de manipulação psicoló
 
 Recentemente, a solução passou a contar com **tecnologia de reconhecimento facial com Dlib**, implementada para fins acadêmicos e para aumentar a praticidade e segurança no login do usuário.
 
-## ✨ Principais Funcionalidades
+## Principais Funcionalidades
 
 -   🧠 **Monitoramento de Hábitos:** Análise de padrões de comportamento de risco para promover autoconsciência.
 -   🔔 **Intervenções Inteligentes:** Notificações e alertas baseados em gatilhos de risco para oferecer suporte no momento certo.
@@ -35,7 +35,7 @@ Recentemente, a solução passou a contar com **tecnologia de reconhecimento fac
 -   🤝 **Rede de Apoio:** Conexão facilitada com familiares, amigos e profissionais.
 -   👤 **Login com Reconhecimento Facial:** Autenticação prática e segura utilizando biometria.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 A solução é construída com uma arquitetura moderna dividida entre o aplicativo mobile e um servidor de inteligência artificial.
 
@@ -143,7 +143,7 @@ npm start
 
 ---
 
-## 👥 Integrantes
+## Integrantes
 
 | Nome | RM | Turma |
 | :--- | :--- | :--- |
